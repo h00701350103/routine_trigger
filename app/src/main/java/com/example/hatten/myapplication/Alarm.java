@@ -107,8 +107,7 @@ public class Alarm extends BroadcastReceiver{
 
     public void notifyTasker(Context context, String id) {
         Intent intent = new Intent("com.example.MyApplication.event_start");
-        //intent.putExtra("title", title);
-        intent.putExtra("id", id);
+        intent.putExtra("occurrence_id", id);
         context.sendBroadcast(intent);
 
     }
